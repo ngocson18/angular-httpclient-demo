@@ -14,6 +14,7 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getNews().subscribe((ressponse) => {
       console.log(ressponse);
+      // tslint:disable-next-line:no-string-literal
       this.articles = ressponse['articles'];
     });
   }
